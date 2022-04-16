@@ -1,10 +1,10 @@
-import Display from './Display';
+import StatisticsLine from './StatisticsLine';
 import Total from './Total';
 import Average from './Average';
 import Percentage from './Percentage';
 
 const Statistics = ({counters, totalCount}) => {
-    // Display message if feedback count is zero.
+    // StatisticsLine message if feedback count is zero.
     if (totalCount === 0) {
         return (
             <div>
@@ -14,9 +14,9 @@ const Statistics = ({counters, totalCount}) => {
     }
     return (
         <div>
-            <Display displayText="good" displayType={counters[0]}/>
-            <Display displayText="neutral" displayType={counters[1]}/>
-            <Display displayText="bad" displayType={counters[2]}/>
+            <StatisticsLine displayText="good" displayCount={counters[0]}/>
+            <StatisticsLine displayText="neutral" displayCount={counters[1]}/>
+            <StatisticsLine displayText="bad" displayCount={counters[2]}/>
             <Total data={counters}/>
             <Average data={counters} total={totalCount}/>
             <Percentage data={counters}/>
