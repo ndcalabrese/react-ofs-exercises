@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Button from './Button';
-import Display from './Display';
 import Statistics from './Statistics';
 
 
@@ -23,9 +22,6 @@ const App = () => {
       <Button feedbackType={neutralFeedback} buttonText='neutral'/>
       <Button feedbackType={badFeedback} buttonText='bad'/>
       <Header headerText="statistics"/>
-      <Display displayText="good" displayType={good}/>
-      <Display displayText="neutral" displayType={neutral}/>
-      <Display displayText="bad" displayType={bad}/>
       <Statistics counters={allCounters}/>
     </div>
   );
