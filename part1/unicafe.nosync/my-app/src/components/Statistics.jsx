@@ -13,14 +13,38 @@ const Statistics = ({counters, totalCount}) => {
         );
     }
     return (
-        <div>
-            <StatisticsLine displayText="good" displayCount={counters[0]}/>
-            <StatisticsLine displayText="neutral" displayCount={counters[1]}/>
-            <StatisticsLine displayText="bad" displayCount={counters[2]}/>
-            <Total data={counters}/>
-            <Average data={counters} total={totalCount}/>
-            <Percentage data={counters}/>
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <StatisticsLine displayText="good" displayCount={counters[0]}/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <StatisticsLine displayText="neutral" displayCount={counters[1]}/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <StatisticsLine displayText="bad" displayCount={counters[2]}/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <Total data={counters}/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <Average data={counters} total={totalCount}/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <Percentage data={counters}/>
+                </td>
+            </tr>
+        </table>
     );
 };
 
