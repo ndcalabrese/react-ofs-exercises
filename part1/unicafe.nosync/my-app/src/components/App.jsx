@@ -9,7 +9,7 @@ const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
   const allCounters = [good, neutral, bad];
-  
+  const totalCount = allCounters[0] + allCounters[1] + allCounters[2]
   
   const goodFeedback = () => setGood(good + 1);
   const neutralFeedback = () => setNeutral(neutral + 1);
@@ -22,7 +22,7 @@ const App = () => {
       <Button feedbackType={neutralFeedback} buttonText='neutral'/>
       <Button feedbackType={badFeedback} buttonText='bad'/>
       <Header headerText="statistics"/>
-      <Statistics counters={allCounters}/>
+      <Statistics counters={allCounters} totalCount={totalCount}/>
     </div>
   );
 };
