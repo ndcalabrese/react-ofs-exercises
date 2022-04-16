@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Button from './Button';
 import Display from './Display';
-import Total from './Total';
-import Average from './Average';
-import Percentage from './Percentage';
+import Statistics from './Statistics';
+
 
 const App = () => {
   const [good, setGood] = useState(0);
@@ -27,9 +26,7 @@ const App = () => {
       <Display displayText="good" displayType={good}/>
       <Display displayText="neutral" displayType={neutral}/>
       <Display displayText="bad" displayType={bad}/>
-      <Total counters={allCounters}/>
-      <Average counters={allCounters}/>
-      <Percentage counters={allCounters}/>
+      <Statistics counters={allCounters}/>
     </div>
   );
 };

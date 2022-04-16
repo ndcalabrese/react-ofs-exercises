@@ -1,9 +1,8 @@
-import React from "react";
-
-const Total = ({counters}) => {
+const Total = ({data}) => {
     return (
         <div>
-            all {counters[0] + counters[1] + counters[2]}
+            {/* Sum of all feedback types */}
+            all {data[0] + data[1] + data[2]}
         </div>
     );
 };

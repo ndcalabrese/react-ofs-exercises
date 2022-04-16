@@ -1,10 +1,9 @@
-import React from "react";
-
-const Average = ({counters}) => {
-    const posNegCount = counters[0] + (counters[2] * -1);
-    const totalCount = counters[0] + counters[1] + counters[2];
+const Average = ({data}) => {
+    const posNegCount = data[0] + (data[2] * -1);
+    const totalCount = data[0] + data[1] + data[2];
     return (
         <div>
+            {/* Tally up total positive feedback against negative feedback, and divide by total feedback */}
             average {posNegCount / totalCount}
         </div>
     );

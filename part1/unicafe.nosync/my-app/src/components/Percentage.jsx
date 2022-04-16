@@ -1,10 +1,9 @@
-import React from "react";
-
-const Percentage = ({counters}) => {
-    const totalCount = counters[0] + counters[1] + counters[2];
+const Percentage = ({data}) => {
+    const totalCount = data[0] + data[1] + data[2];
     return (
         <div>
-            positive {counters[0] / totalCount * 100} %
+            {/* Positive feedback divided by total feedback */}
+            positive {data[0] / totalCount * 100} %
         </div>
     );
 };
