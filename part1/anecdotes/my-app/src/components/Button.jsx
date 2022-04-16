@@ -1,7 +1,7 @@
-const Button = ({feedbackType, buttonText}) => {
+const Button = ({action, buttonText}) => {
     return (
         <>
-            <button onClick={feedbackType}>
+            <button onClick={action}>
                 {buttonText}    
             </button>
         </>
