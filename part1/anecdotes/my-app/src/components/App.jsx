@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import Header from "./Header";
 
 const App = () => {
     const anecdotes = [
@@ -32,6 +33,17 @@ const App = () => {
         6: 0
     });
 
+    const mostVotes = Object.keys(votes)
+    .reduce(
+        (firstValue, secondValue) => {
+            if (votes[firstValue] > votes[secondValue]) {
+                return firstValue;
+            } else {
+                return secondValue;
+            }
+        }
+    );
+
     // Sets to state to random number
     const getAnecdote = () => setSelected(getRandomInt())
 
@@ -51,10 +63,14 @@ const App = () => {
     }
 
     return <>
+        <Header headerText="Anecdote of the day"/>
         <p>{anecdotes[selected]}</p>
         <p>has {votes[selected]} votes</p>
         <Button action={() => addVote(selected)} buttonText="vote"/>
         <Button action={getAnecdote} buttonText="next anecdote"/>
+        <Header headerText="Anecdote with most votes"/>
+        <p>{anecdotes[mostVotes]}</p>
+        <p>has {votes[mostVotes]} votes</p>
     </>;
 };
 
