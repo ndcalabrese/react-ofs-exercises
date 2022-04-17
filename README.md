@@ -1,4 +1,4 @@
-# react-course-info-step3
+# Please view each commit for the appropriate step
+## react-ofs-exercises
 Day 35: React Part 2
 
-# Please view each commit for the appropriate step
