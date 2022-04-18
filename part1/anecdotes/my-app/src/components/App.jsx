@@ -74,7 +74,7 @@ const App = () => {
         <p>{anecdotes[mostVotes]}</p>
         <p>has {votes[mostVotes]} votes</p>
         </>
-    );
+    )
 };
 
 export default App;
