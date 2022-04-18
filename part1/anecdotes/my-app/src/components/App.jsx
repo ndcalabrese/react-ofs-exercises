@@ -33,6 +33,8 @@ const App = () => {
         6: 0
     });
 
+    // Runs a reduce method on the votes object's values, and returns
+    // the property with the highest value (highest votes)
     const mostVotes = Object.keys(votes)
     .reduce(
         (firstValue, secondValue) => {
@@ -48,8 +50,7 @@ const App = () => {
     const getAnecdote = () => setSelected(getRandomInt())
 
     // Generates a random integer from 0 to 6 (inclusive)
-    const getRandomInt = () => 
-        Math.floor(Math.random() * 7);
+    const getRandomInt = () => Math.floor(Math.random() * 7);
 
     // Initializes new object to track updated votes to prevent mutating original state
     const addVote = (anecdotesIndex) => {
@@ -62,7 +63,8 @@ const App = () => {
         setVotes(newVotes);
     }
 
-    return <>
+    return (
+        <>
         <Header headerText="Anecdote of the day"/>
         <p>{anecdotes[selected]}</p>
         <p>has {votes[selected]} votes</p>
@@ -71,7 +73,8 @@ const App = () => {
         <Header headerText="Anecdote with most votes"/>
         <p>{anecdotes[mostVotes]}</p>
         <p>has {votes[mostVotes]} votes</p>
-    </>;
+        </>
+    );
 };
 
 export default App;
